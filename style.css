@@ -1,0 +1,19 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid{
+    margin: 0;
+}
+
+.jumbotron{
+    background-color: #F0F8FF;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.display-4{
+    text-align: center;
+} 
