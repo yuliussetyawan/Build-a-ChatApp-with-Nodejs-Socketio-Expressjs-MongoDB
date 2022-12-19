@@ -26,6 +26,7 @@
       integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
       crossorigin="anonymous"
     ></script>
+    <script src="/socket.io/socket.io.js"node></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -34,7 +35,9 @@
         <div class="jumbotron">
             <h1 class="display-4">Send Message</h1>
             <br>
-            <input type="text" class="form-control" placeholder="Name">
+            <input id="name" type="text" class="form-control" placeholder="Name">
+            <br>
+            <textarea id="message" class="form-control" placeholder="Message"></textarea>
             <br>
             <button class="btn btn-success" id="send">Send</button>
         </div>
