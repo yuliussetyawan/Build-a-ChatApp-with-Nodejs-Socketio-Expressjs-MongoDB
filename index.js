@@ -8,13 +8,14 @@ $(()=>{
     });
     getMessages();
 });
+socket.on('message', addMessage);
 
 function addMessage(message){
     $("#messages").append( `<h4> ${message.name}</h4> <p>${message.message}`);
 }
 
 function getMessages(){
-    $.get('http://localhost:3000/messages', (data) => {
+    $.get('http://localhost:3010/messages', (data) => {
         //data.forEach(addMessage);
         for (let i = 0; i <data.length; i++){
             addMessage(data[i]);
@@ -23,6 +24,5 @@ function getMessages(){
 }
 
 function postMessage(message){
-    $.post('http://localhost:3000/messages', message)
-        //data.forEach(addMessage);
+    $.post('http://localhost:3010/messages', message);
 }

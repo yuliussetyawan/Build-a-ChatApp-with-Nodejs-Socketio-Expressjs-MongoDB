@@ -20,14 +20,15 @@ app.get('/messages', (req, res) => {
 });
 
 app.post('/messages', (req, res) => {
-  messages.push(req.body)
-  res.sendStatus(200)
+  messages.push(req.body);
+  io.emit('message', req.body);
+  res.sendStatus(200);
 });
 
 io.on("connection", (socket) => {
   console.log("User connected");
 });
 
-const server = http.listen(3000, () => {
+const server = http.listen(3010, () => {
   console.log('I am listening to the port ' + server.address().port)
 });
