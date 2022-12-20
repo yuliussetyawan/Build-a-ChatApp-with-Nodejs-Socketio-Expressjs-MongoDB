@@ -19,10 +19,13 @@ const Message = mongoose.model('Message', {
   message: String
 })
 
-let messages = [{ name: 'John', message: 'hello world' }]
+//let messages = [{ name: 'John', message: 'hello world' }]
 
 app.get('/messages', (req, res) => {
-  res.send(messages)
+  Message.find({}, (err,messages) => {
+    res.send(messages)
+  })
+  
 })
 
 app.post('/messages', (req, res) => {
@@ -31,7 +34,7 @@ app.post('/messages', (req, res) => {
     if (err) {
       res.sendStatus(500)
     } else {
-      messages.push(req.body)
+      // messages.push(req.body)
       io.emit('message', req.body)
       res.sendStatus(200)
     }
@@ -43,7 +46,7 @@ io.on('connection', socket => {
 })
 
 mongoose.connect(dbUrl, err => {
-  console.log('Mongodb connection is succesfull')
+  console.log('Mongodb connection is succesfull');
 })
 
 const server = http.listen(3010, () => {

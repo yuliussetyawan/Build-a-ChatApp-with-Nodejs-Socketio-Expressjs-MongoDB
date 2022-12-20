@@ -10,7 +10,7 @@ $(() => {
 })
 socket.on('message', addMessage)
 
-function addMessage (message) {
+function addMessage(message) {
   $('#messages').append(`<h4> ${message.name}</h4> <p>${message.message}`)
 }
 
