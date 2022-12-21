@@ -6,6 +6,8 @@ const io = require('socket.io')(http)
 const mongoose = require('mongoose')
 require('dotenv').config()
 
+var port = process.env.PORT || 3010
+
 
 app.use(express.static(__dirname))
 //expecting json to be coming with http request
@@ -49,6 +51,6 @@ mongoose.connect(dbUrl, err => {
   console.log('Mongodb connection is succesfull');
 })
 
-const server = http.listen(3010, () => {
-  console.log('I am listening to the port ' + server.address().port)
+const server = http.listen(port, () => {
+  console.log('I am listening to the port %d ', port)
 })
