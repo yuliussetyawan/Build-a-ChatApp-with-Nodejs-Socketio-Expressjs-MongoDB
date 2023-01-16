@@ -8,7 +8,7 @@ This project is a simple real-time chat application that allows users to send an
 
 ## Getting Started
 1. Clone the repository
-git clone https://github.com/<YOUR_USERNAME>/Build-a-ChatApp-with-Nodejs-Socketio-Expressjs-MongoDB.git
+git clone https://github.com/yuliussetyawan/Build-a-ChatApp-with-Nodejs-Socketio-Expressjs-MongoDB.git
 2. Install dependencies
 npm install
 3. Start the server
