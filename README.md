@@ -1,6 +1,28 @@
-# Build a Chat Web App with Nodejs Socketio, Express js, & MongoDB
+# Build-a-ChatApp-with-Nodejs-Socketio-Expressjs-MongoDB
 
-A simple chat web app where people can chat each other in a real time
+## Overview
+This project is a simple real-time chat application that allows users to send and receive messages in real-time. The project utilizes the following technologies:
+- Node.js
+- Socket.io
+- Express.js
+
+## Getting Started
+1. Clone the repository
+git clone https://github.com/<YOUR_USERNAME>/Build-a-ChatApp-with-Nodejs-Socketio-Expressjs-MongoDB.git
+2. Install dependencies
+npm install
+3. Start the server
+npm start
+4. Visit `http://localhost:3000` in your browser to access the application
+5. Start chatting with connected users
+
+## Features
+- Send and receive messages in real-time
+
+## Additional Resources
+- [Node.js](https://nodejs.org/)
+- [Socket.io](https://socket.io/)
+- [Express.js](https://expressjs.com/)
 
 
 ## Source
